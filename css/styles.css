@@ -1,0 +1,63 @@
+/* Import 'Outfit' fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+/* CSS Custom Properties */
+
+:root {
+/* Fonts  */
+--font-family: 'Outfit', sans-serif;
+--p: 18px;
+
+/* Colors */
+--body-bg-color: hsl(217, 54%, 11%);
+--card-bg-color: hsl(216, 50%, 16%);
+--line-color: hsl(215, 32%, 27%);
+--white: #fff;
+--primary-blue: hsl(215, 51%, 70%);
+--primary-cyan: hsl(178, 100%, 50%);
+}
+
+body {
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    min-width: 100vh;
+    min-height: 100vh;
+    background-color: var(--body-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+footer {
+   font-size: 11px; text-align: center; 
+   color: hsl(228, 45%, 44%);
+}
+
+main{
+    background-color: var(--card-bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+
+}
+
+.Equilibrium {
+    border-radius: 10px;
+    width: 300px;
+    height: auto;
+}
+
+.avatar {
+    border: 1px solid var(--white);
+    width: 80px;
+    height: auto;
+}
+
+.card_details {
+
+
+}
