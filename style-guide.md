@@ -31,3 +31,12 @@ The designs were created to the following widths:
 
 - Family: [Outfit](https://fonts.google.com/specimen/Outfit)
 - Weights: 300, 400, 600
+
+### To Do
+
+- change the hr color to --primary-cyan
+- align ethereum icon, 0.041 ETH to right, clock image, 3 days left to the right, on the same line
+- reduce size of avatar
+- add circular white border around avatar
+- style 'creation of Jules Wyvern' in line with avatar
+- padding

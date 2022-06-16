@@ -1,39 +1,58 @@
-/* Import 'Outfit' fonts from Google Fonts */
+/*#### Import 'Outfit' fonts from Google Fonts #####*/
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
 
-/* CSS Custom Properties */
+/*#### CSS Custom Properties ####*/
 
 :root {
-/* Fonts  */
+/*#### Fonts  ####*/
 --font-family: 'Outfit', sans-serif;
 --p: 18px;
 
-/* Colors */
+/*#### Colors ####*/
 --body-bg-color: hsl(217, 54%, 11%);
 --card-bg-color: hsl(216, 50%, 16%);
 --line-color: hsl(215, 32%, 27%);
 --white: #fff;
 --primary-blue: hsl(215, 51%, 70%);
 --primary-cyan: hsl(178, 100%, 50%);
+--footer-color: hsl(228, 45%, 44%);
 }
 
 body {
     box-sizing: border-box;
     font-family: var(--font-family);
-    min-width: 100vh;
+    min-width: 60vh;
     min-height: 100vh;
     background-color: var(--body-bg-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
-footer {
-   font-size: 11px; text-align: center; 
-   color: hsl(228, 45%, 44%);
+p {
+    color: var(--primary-blue);
+    font-weight: 300;
 }
+
+h1 {
+    color: var(--white);
+    font-size: 1.2rem;
+}
+/*#### Amount in Ethereum shown ####*/
+.value {
+    color: var(--primary-cyan);
+    display: inline;
+    font-weight: 600;
+}
+
+/*#### Horizontal Rule styling - the border set as background bg then border-top gives a clean, sharp line  */
+hr {
+    border: 1px solid var(--card-bg-color);
+    border-top: 1px solid var(--line-color);
+}
+
+/*#### Main container to hold all elements ####*/
 
 main{
     background-color: var(--card-bg-color);
@@ -41,23 +60,138 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
- 
-
+    border-radius: 12px;
+    padding: 1.25rem 1.25rem 1rem 1.25rem;
 }
 
+/*#### container for the images to transition in and out ####*/
+.image_container {
+    border-radius: 10px;
+    height: 16.875rem;
+    margin-bottom: 1rem;
+}
+
+/*#### main img tag ####*/
 .Equilibrium {
     border-radius: 10px;
-    width: 300px;
+    width: 16.875rem;
     height: auto;
+    opacity: 1;
+    transition: .5s ease;
 }
 
+/*#### container that holds the 'eye' image for transition in on active click ####*/
+.overlay {
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+/*#### Set the cursor to a finger pointing, like a link ####*/
+.image_container:hover {
+    cursor: pointer;
+    
+}
+
+/*#### Active events for transition ####*/
+.image_container:hover .Equilibrium {
+    opacity: 0.5;
+}
+.image_container:active .Equilibrium {
+    opacity: 0.3;
+}
+.image_container:active .overlay {
+    opacity: 1;
+}
+.image_container:active {
+    background-color: var(--primary-cyan);
+}
+/*#### Container for all content in the card below the image ####*/
+.card_details {
+    padding-top: 0.5rem;
+    max-width: 270px;
+}
+
+/*#### Add some padding to the right of each image #### */
+.clock, .icon-ethereum {
+    padding-right: 0.5rem;
+}
+
+/*#### The small circular image of the users avatar ####*/
 .avatar {
     border: 1px solid var(--white);
-    width: 80px;
+    border-radius: 50%;
+    width: 2rem;
     height: auto;
 }
-
-.card_details {
-
-
+/*#### Container for Ethereum value and 3 days left ####*/
+.value_and_time {
+    white-space: nowrap;
+    overflow-x: auto;
 }
+.value_and_time p {
+    display: inline;
+} 
+/*#### Floats left and right followed by clear to push the value and days remaining to either side */
+.left {
+    float: left;
+    display: flex;
+    align-items: center;
+}
+.right {
+    float: right;
+    display: flex;
+    align-items: center;
+}
+
+.clear {
+    clear: both;
+}
+/*#### Created by section ####*/
+.creator {
+    display: flex;
+    align-items: center;
+    }
+
+.creator p {
+    padding-left: 0.5rem;
+}
+
+/*#### Footer containing the 'Challenge by..' text  */
+
+footer {
+    font-size: 11px; text-align: center; 
+    color: var(--footer-color);
+ }
+
+/* Link styles */
+footer, footer a {
+    padding-top: 3rem;
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+.card_details a:link {
+    text-decoration: none;
+    color:var(--white);
+    font-size: 1.2rem;
+} 
+.creator a:link {
+    font-size: 1rem;
+    font-weight: 400;
+}
+a:visited  {
+    color: var(--white);
+}
+a:hover {
+    color: var(--primary-blue);
+}
+a:active {
+    color: var(--primary-cyan);
+}
+
+
+
