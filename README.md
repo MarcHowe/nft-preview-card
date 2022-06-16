@@ -26,11 +26,11 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](./images/screenshot.jpg)
+![Screenshot](./images/Screenshot.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL:(https://www.frontendmentor.io/solutions/nft-preview-card-using-flex-and-interactive-hoveractive-conditions-qJaWhRmzmO)
 - Live Site URL:(https://nft-preview-card-eq3.pages.dev/)
 
 ## My process
