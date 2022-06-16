@@ -26,12 +26,12 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot](.images/screenshot.jpg)
+![Screenshot](./images/screenshot.jpg)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL:(https://nft-preview-card-eq3.pages.dev/)
 
 ## My process
 
